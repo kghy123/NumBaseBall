@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list
+    android:oneshot="true" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/pitcher01" android:duration="200"/>
+    <item android:drawable="@drawable/pitcher02" android:duration="200"/>
+    <item android:drawable="@drawable/pitcher03" android:duration="200"/>
+    <item android:drawable="@drawable/pitcher04" android:duration="200"/>
+    <item android:drawable="@drawable/pitcher05" android:duration="200"/>
+    <item android:drawable="@drawable/pitcher06" android:duration="400"/>
+    <item android:drawable="@drawable/pitcher01" android:duration="0"/>
+
+</animation-list>

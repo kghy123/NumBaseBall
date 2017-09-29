@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:weightSum="9"
+    android:background="@drawable/grass"
+    tools:context="com.kghy1234gmail.numbaseball.SingleGameActivity">
+
+    <com.victor.loading.rotate.RotateLoading
+        android:id="@+id/server_loading"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:loading_width="5dp"
+        app:loading_color="#ffffff"
+        android:layout_gravity="center_horizontal"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:orientation="vertical"
+        android:weightSum="7">
+
+        <TextView
+            android:id="@+id/server_mynum"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:textSize="24sp"
+            android:text="내 숫자 : "/>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_margin="8dp"
+            android:id="@+id/server_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#5d5d5d"
+            android:padding="8dp"
+            android:layout_weight="3">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_margin="8dp"
+            android:id="@+id/server_recycler_view_enemy"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#5d5d5d"
+            android:padding="8dp"
+            android:layout_weight="3">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/server_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/mound"
+            android:layout_alignParentBottom="true"/>
+
+        <ImageView
+            android:id="@+id/server_pitcher_img_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/img_pitcher"
+            android:layout_marginBottom="55dp"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:weightSum="3"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/server_player100"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:met_maxCharacters="1"
+            app:met_underlineColor="#000000"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:inputType="number"
+            android:hint="0-9"
+            app:met_textColorHint="#F2CB61"
+            android:textSize="24sp"
+            android:gravity="center_horizontal"
+            />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/server_player10"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:met_maxCharacters="1"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            app:met_underlineColor="#000000"
+            app:met_textColorHint="#F2CB61"
+            android:inputType="number"
+            android:hint="0-9"
+            android:textSize="24sp"
+            android:gravity="center_horizontal"
+            />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/server_player1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:met_maxCharacters="1"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            app:met_underlineColor="#000000"
+            android:inputType="number"
+            app:met_textColorHint="#F2CB61"
+            android:hint="0-9"
+            android:textSize="24sp"
+            android:gravity="center_horizontal"
+            />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:src="@drawable/btn_selector_single_hit"
+        android:clickable="true"
+        android:onClick="clickHit"/>
+
+
+
+</LinearLayout>

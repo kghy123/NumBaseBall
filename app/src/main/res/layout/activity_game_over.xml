@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="6"
+    android:padding="16dp"
+    android:background="@drawable/grass"
+    tools:context="com.kghy1234gmail.numbaseball.GameOverActivity">
+
+    <TextView
+        android:id="@+id/gameover_tv_win"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="48sp"
+        android:gravity="center"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/gameover_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#5d5d5d"
+            android:padding="8dp">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <nl.dionsegijn.konfetti.KonfettiView
+            android:id="@+id/gameover_konfetti_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/btn_selector_gameover_restart"
+            android:clickable="true"
+            android:onClick="clickRestart"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/btn_selector_main_exit"
+            android:clickable="true"
+            android:onClick="clickExit"/>
+
+    </LinearLayout>
+
+</LinearLayout>
